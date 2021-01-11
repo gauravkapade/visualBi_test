@@ -1,0 +1,58 @@
+div#mainWrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+div#songsList{
+  position: 'relative';
+  float: 'left';
+  width: '100%';
+  overflow: 'hidden';
+  height: '100% !important'
+}
+
+.song-btn{
+  position: absolute;
+  bottom:0;
+  right:0;
+  padding: 0.02rem 0.04rem;
+  background: pink;
+  border: none;
+  font-size: 3vh;
+  border-radius: 0.5rem 0  0 0.5rem;
+  transform: translate(100%, 100%);
+  transition: all 1s linear;
+}
+
+p.songInfo {
+   margin: 2px;
+}
+
+h4.songPosition {
+  color: aqua;
+  margin: 2px;
+}
+
+div.song {
+  margin: 10px;
+  flex-basis: 0;
+  border: 0.1px solid black;
+}
+
+h1#mainTitle {
+  text-align: center;
+}
+
+img#playlist{
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+p {
+  color: aliceblue;
+  text-align: center;
+  margin-bottom: 0px;
+}

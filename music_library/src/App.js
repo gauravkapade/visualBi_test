@@ -1,27 +1,27 @@
 import logo from './logo.svg';
 import './App.css';
 import React, {Component} from 'react';
-import AllSongs from './Components/allSongs';
+import MusicPlayer from './Components/MusicPlayer';
+import Footer from './Components/Footer';
+import MusicContainer from './containers/MusicContainer';
 
-class App extends Component {
-    render() {
-        return (
-            <AllSongs allSongs={this.state.allSongs} />
-        )
-    }
 
-    state = {
-        allSongs: []
-    };
 
-    componentDidMount() {
-        fetch('https://jsonplaceholder.typicode.com/albums')
-            .then(res => res.json())
-            .then((data) => {
-                this.setState({ allSongs: data })
-            })
-            .catch(console.log)
-    }
+function App() {
+  return (
+    <div className='mainContainer' >
+      <header className='App-header'>
+        <h1 id="mainTitle">GK Music List</h1>
+      <hr/>
+      </header>
+      <div className='rowForm'>
+        <div className='left' id='playerDiv'><MusicPlayer /></div>
+        <div className='left' id='musiclistDiv'><MusicContainer /></div>
+      </div>
+      <div className='footer'><Footer/></div>
+
+  </div>
+)
 }
 
 export default App;
